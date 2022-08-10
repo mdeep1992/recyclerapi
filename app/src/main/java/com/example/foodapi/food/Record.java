@@ -1,9 +1,9 @@
-package com.example.foodapi;
+package com.example.foodapi.food;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ModelApi {
+public class Record {
     @SerializedName("calories")
     @Expose
     private String calories;
@@ -147,4 +147,5 @@ public class ModelApi {
     public void setCountry(String country) {
         this.country = country;
     }
+
 }
