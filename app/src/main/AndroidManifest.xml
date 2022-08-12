@@ -16,7 +16,8 @@
         android:theme="@style/Theme.FoodApi"
         tools:targetApi="31">
         <activity
-            android:name=".FoodActivity"
+            android:name=".food.FoodActivity"
+            android:parentActivityName=".food.MainActivity"
             android:exported="false" />
         <activity
             android:name=".food.MainActivity"

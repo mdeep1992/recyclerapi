@@ -4,7 +4,7 @@ import android.view.View;
 
 public interface MyOnClick {
 
-    void onClick(View view, Record record);
+    void onClick(Record position);
 
-    void onLongClick(View view, int position);
+
 }

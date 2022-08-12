@@ -19,6 +19,7 @@ public class FoodActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         image = findViewById(R.id.imageload);
         header = findViewById(R.id.headingg);
         description = findViewById(R.id.descriptionn);
@@ -38,9 +39,9 @@ try {
 //       image.setImageResource(Integer.parseInt(image1));
         header.setText(heading1);
         description.setText(desc1);
-        fats.setText(protein1);
-        protein.setText(fat1);
-        calories.setText(calorie1);
+        fats.setText("PROTEINS:"+(protein1));
+        protein.setText("FAT:"+(fat1));
+        calories.setText("CALORIES:"+(calorie1));
 }catch (Exception e){
     Log.d("error","failed");
 }
