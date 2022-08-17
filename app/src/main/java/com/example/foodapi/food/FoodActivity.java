@@ -1,25 +1,48 @@
 package com.example.foodapi.food;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.foodapi.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
 
 public class FoodActivity extends AppCompatActivity {
     ImageView image;
     TextView header, description, fats, protein, calories;
+    BottomNavigationView bnv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        bnv=findViewById(R.id.navigation_bar);
+        bnv.setSelectedItemId(R.id.home1);
+        bnv.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.Call1:
+                        return true;
+                    case R.id.home1:
+                        startActivity(new Intent(FoodActivity.this,MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                }
+
+
+                return true;
+            }
+        });
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         image = findViewById(R.id.imageload);
         header = findViewById(R.id.headingg);
         description = findViewById(R.id.descriptionn);

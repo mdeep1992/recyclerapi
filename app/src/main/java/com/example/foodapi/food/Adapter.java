@@ -63,7 +63,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Viewholder>  {
 
                 myOnClick.onClick(list.get(position));
 
-                Log.d("data>>>>",list.get(position).getName());
+//                Log.d("data>>>>",list.get(position).getName());
             }
         });
     }

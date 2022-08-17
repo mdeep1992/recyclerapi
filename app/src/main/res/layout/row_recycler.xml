@@ -1,37 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/my_linear"
+    android:layout_margin="10dp"
     android:layout_height="wrap_content">
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#EDEBEB"
+        app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <ImageView
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/row_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_margin="10dp" />
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_vertical"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/row_txtname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
+                android:paddingStart="5dp"
+                android:textStyle="bold"
                 android:text="name"/>
+
             <TextView
                 android:id="@+id/row_txtaddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="Address"/>
+                android:paddingStart="5dp"
+                android:text="Address"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
 
     </LinearLayout>
-
-
+</androidx.cardview.widget.CardView>
 </LinearLayout>
